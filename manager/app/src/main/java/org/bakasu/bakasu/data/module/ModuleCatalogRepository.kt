@@ -28,7 +28,7 @@ class ModuleCatalogRepository(
     private val networkRequestRepository: NetworkRequestRepository,
 ) {
     private companion object {
-        const val MODULES_URL = "https://modules.kernelsu.org/modules.json"
+        const val MODULES_URL = "https://cdn.jsdelivr.net/gh/mingynng/kernelsu-modules@main/modules.json"
     }
 
     private val refreshMutex = Mutex()
@@ -134,7 +134,7 @@ class ModuleCatalogRepository(
     }
 
     private suspend fun fetchModuleDetail(moduleId: String): Detail? = networkRequestRepository
-        .fetch("https://modules.kernelsu.org/module/$moduleId.json")
+        .fetch("https://mingynng.github.io/kernelsu-modules/module/$moduleId.json")
         .getOrNull()
         ?.let { body ->
             val json = JSONObject(body)
