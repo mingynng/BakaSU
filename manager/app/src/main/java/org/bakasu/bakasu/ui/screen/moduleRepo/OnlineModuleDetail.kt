@@ -178,7 +178,7 @@ private fun OnlineModuleDetailContent(module: CatalogModule) {
                     actions = {
                         IconButton(
                             onClick = {
-                                uriHandler.openUri("https://modules.kernelsu.org/module/${module.moduleId}")
+                                uriHandler.openUri("https://cdn.jsdelivr.net/gh/mingynng/kernelsu-modules@main/module/${module.moduleId}")
                             },
                         ) {
                             Icon(
