@@ -134,7 +134,7 @@ class ModuleCatalogRepository(
     }
 
     private suspend fun fetchModuleDetail(moduleId: String): Detail? = networkRequestRepository
-        .fetch("https://mingynng.github.io/kernelsu-modules/module/$moduleId.json")
+        .fetch("https://cdn.jsdelivr.net/gh/mingynng/kernelsu-modules@main/module/$moduleId.json")
         .getOrNull()
         ?.let { body ->
             val json = JSONObject(body)
