@@ -84,7 +84,7 @@ class SettingsPlatformRepository(
             checkManagerUpdate = settings.getBoolean("check_update", true),
             checkBetaUpdate = settings.getBoolean("check_beta_update", true),
             checkModuleUpdate = loadModuleUpdatePreference(),
-            autoJailbreakEnabled = settings.getBoolean("auto_jailbreak", false),
+            autoJailbreakEnabled = settings.getBoolean("auto_jailbreak", true),
             useBuiltinMonoFont = themeConfig.useBuiltinMonoFont,
             useSoftReboot = settings.getBoolean("use_soft_reboot", false),
             enableSwipeDismiss = settings.getBoolean("enable_swipe_dismiss", true),
