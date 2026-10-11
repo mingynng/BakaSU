@@ -134,7 +134,7 @@ class ThemeConfig(
     var isEnableBlur by mutableStateOf(false)
     var isEnableBlurExp by mutableStateOf(false)
     var isUseBackgroundSeedColor by mutableStateOf(false)
-    var bottomBarStyle by mutableStateOf(BottomBarStyle.MATERIAL3_EXPRESSIVE)
+    var bottomBarStyle by mutableStateOf(BottomBarStyle.FLOATING)
 
     fun resetBackgroundState() {
         backgroundImageLoaded = false
@@ -414,7 +414,7 @@ private fun ThemeInitializer(
             themeConfig.dynamicColorSpec,
         )
         themeConfig.isEnableBlur = settings.getBoolean("enable_blur", false)
-        themeConfig.bottomBarStyle = BottomBarStyle.fromOrdinal(settings.getInt("bottom_bar_style", 0))
+        themeConfig.bottomBarStyle = BottomBarStyle.fromOrdinal(settings.getInt("bottom_bar_style", 1))
         cardConfig.load()
         backgroundManager.loadCustomBackground()
     }
