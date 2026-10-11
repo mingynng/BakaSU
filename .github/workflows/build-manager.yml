@@ -400,7 +400,7 @@ jobs:
 
   upload-telegram:
     needs: [repack-manager, telegram-bot-api]
-    if: github.event_name != 'pull_request' && github.event_name != 'workflow_call'
+    if: false && github.event_name != 'pull_request' && github.event_name != 'workflow_call'
     runs-on: ubuntu-latest
     strategy:
       matrix:
