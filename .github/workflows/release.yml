@@ -12,6 +12,7 @@ jobs:
   release:
     needs:
       - build-manager
+    if: false
     runs-on: ubuntu-latest
     steps:
       - name: Download Manager artifacts
