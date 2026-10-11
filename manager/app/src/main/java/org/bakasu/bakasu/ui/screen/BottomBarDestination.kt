@@ -2,10 +2,10 @@ package org.bakasu.bakasu.ui.screen
 
 import androidx.annotation.StringRes
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.twotone.AdminPanelSettings
-import androidx.compose.material.icons.twotone.Extension
-import androidx.compose.material.icons.twotone.Home
-import androidx.compose.material.icons.twotone.Settings
+import androidx.compose.material.icons.outlined.AdminPanelSettings
+import androidx.compose.material.icons.outlined.Extension
+import androidx.compose.material.icons.outlined.Home
+import androidx.compose.material.icons.outlined.Settings
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.unit.Dp
@@ -25,29 +25,29 @@ enum class BottomBarDestination(
     Home(
         { bottomPadding -> HomePage(bottomPadding) },
         R.string.home,
-        Icons.TwoTone.Home,
-        Icons.TwoTone.Home,
+        Icons.Outlined.Home,
+        Icons.Outlined.Home,
         false,
     ),
     SuperUser(
         { bottomPadding -> SuperUserPage(bottomPadding) },
         R.string.superuser,
-        Icons.TwoTone.AdminPanelSettings,
-        Icons.TwoTone.AdminPanelSettings,
+        Icons.Outlined.AdminPanelSettings,
+        Icons.Outlined.AdminPanelSettings,
         true,
     ),
     Module(
         { bottomPadding -> ModulePage(bottomPadding) },
         R.string.module,
-        Icons.TwoTone.Extension,
-        Icons.TwoTone.Extension,
+        Icons.Outlined.Extension,
+        Icons.Outlined.Extension,
         true,
     ),
     Settings(
         { bottomPadding -> SettingsPage(bottomPadding) },
         R.string.settings,
-        Icons.TwoTone.Settings,
-        Icons.TwoTone.Settings,
+        Icons.Outlined.Settings,
+        Icons.Outlined.Settings,
         false,
     ),
     ;
